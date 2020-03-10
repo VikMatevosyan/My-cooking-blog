@@ -1,0 +1,37 @@
+@media all and (max-width: 1020px) {
+    .hamburger-menu {
+        display: block;
+        position: relative;
+        z-index: 2;
+        text-align: center;
+    }
+    nav {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .nav-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        overflow-y: auto;
+        position: fixed;
+        background: #c99e39a8;
+        width: 100%;
+        opacity: 0;
+        height: 100%;
+        bottom:100%;
+        left: 0;
+        z-index: 1;
+        transition: all 0.5s;
+        margin-bottom: 0;
+    }
+    .nav-checkbox:checked ~ .nav-content {
+        opacity: 1;
+        bottom: 0;
+    }
+    .nav-content li {
+        font-size: 20px;
+    }
+
+}
